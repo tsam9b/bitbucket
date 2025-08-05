@@ -1,0 +1,93 @@
+.virtualized-list-container {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.virtualized-list {
+  outline: none;
+}
+
+.virtualized-item {
+  padding: 8px 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.virtualized-item:last-child {
+  border-bottom: none;
+}
+
+.item-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #fafafa;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.item-card:hover {
+  background: #f0f0f0;
+}
+
+.item-header {
+  flex-grow: 1;
+}
+
+.item-name {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.item-category {
+  font-size: 12px;
+  color: #666;
+  background: #e5e7eb;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.item-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #059669;
+  margin-left: 16px;
+}
+
+.no-items {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-style: italic;
+}
+
+.no-items p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Scrollbar styling for webkit browsers */
+.virtualized-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.virtualized-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.virtualized-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.virtualized-list::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
