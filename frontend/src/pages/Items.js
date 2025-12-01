@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useData } from '../state/DataContext';
+import { useTranslation } from '../state/TranslationContext';
 import { useIsMounted } from '../hooks/useSafeAsync';
 import SkeletonLoader from '../components/SkeletonLoader';
 import VirtualizedItemsList from '../components/VirtualizedItemsList';
@@ -19,6 +20,7 @@ function Items() {
     goToPage, 
     updateFilters
   } = useData();
+  const { t } = useTranslation();
 
   const isMountedRef = useIsMounted();
   const [searchForm, setSearchForm] = useState({
@@ -202,7 +204,8 @@ function Items() {
 
       {/* Header */}
       <header className="items-header">
-        <h1 className="items-title">Items</h1>
+        <h1 className="items-title">{t('messages.welcome.title')}</h1>
+        <p className="items-subtitle">{t('messages.welcome.subtitle')}</p>
       </header>
 
       {/* Search and Filter Controls */}
